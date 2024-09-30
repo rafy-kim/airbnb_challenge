@@ -7,6 +7,7 @@ class TweetAdmin(admin.ModelAdmin):
     list_display = (
         "user",
         "payload",
+        "like_count",
     )
 
 @admin.register(Like)
