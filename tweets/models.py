@@ -4,7 +4,7 @@ from common.models import CommonModel
 # Create your models here.
 
 class Tweet(CommonModel):
-    payload = models.TextField(max_length=180, blank=True, null=True)
+    payload = models.TextField(max_length=180)
     user = models.ForeignKey("users.User", on_delete=models.CASCADE, related_name="tweets",)
 
     def __str__(self):
